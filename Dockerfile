@@ -1,4 +1,4 @@
-FROM maven:3.8.6-openjdk-11-slim
+FROM maven:3.8.6-openjdk-11
 ENV GOLDEN_DB_URL=localhost
 ENV GOLDEN_DB_NAME=goldenwaste
 ENV GOLDEN_DB_USERNAME=root
