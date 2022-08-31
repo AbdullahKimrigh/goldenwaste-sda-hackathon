@@ -7,7 +7,7 @@ ENV GOLDEN_DB_PORT=3306
 WORKDIR /app
 ADD pom.xml .
 RUN ["/usr/local/bin/mvn-entrypoint.sh", "mvn", "verify", "clean", "--fail-never"]
-COPY . .
 RUN mvn package
+COPY . .
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","target/goldenWastedd-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","*.jar"]
