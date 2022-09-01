@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>goldenWastedd</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>goldenWastedd</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -77,6 +77,20 @@
         </dependency>
 	</dependencies>
 
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>d75b3828f4d7-releases</name>
+        <url>http://ec2-3-16-149-176.us-east-2.compute.amazonaws.com:8081/artifactory/goldenwaste-sda-hack-libs-release-local</url>
+    </repository>
+
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>d75b3828f4d7-snapshots</name>
+        <url>http://ec2-3-16-149-176.us-east-2.compute.amazonaws.com:8081/artifactory/goldenwaste-sda-hack-libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -89,7 +103,7 @@
                 <configuration>
                     <skipTests>true</skipTests>
                 </configuration>
-    </plugin>
+            </plugin>
 		</plugins>
 	</build>
 
